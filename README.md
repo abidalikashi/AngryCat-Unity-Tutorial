@@ -1,4 +1,4 @@
-# Flappy-Unity-Tutorial
+# FlappyCat-Unity-Tutorial
 <h2> This is a simple unity tutorial game to showcase what you can do in unity in less than an hour </h2>
 
 We’re going to dive into Unity and start building our first 2D game
