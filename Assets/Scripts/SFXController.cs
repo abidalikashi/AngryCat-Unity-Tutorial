@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SFXController : MonoBehaviour
 {
     //  public AudioSource[] clips;
     public AudioSource[] music;
-    public float musicVolume = 10f;
+    //public float musicVolume = 10f;
+    public Slider sliderVolume;
     // Start is called before the first frame update
 
     //  private AudioSource flap;
@@ -40,13 +42,19 @@ public class SFXController : MonoBehaviour
       //  die = clips[1];
         mainMenuMusic = music[0];
         levelOneMusic = music[1];
-        mainMenuMusic.volume = musicVolume;
-        levelOneMusic.volume = musicVolume;
+        // start at half, we want to write a player config presistence class that holds the player 
+        // settings profile and figures out the previous values on game start
+        sliderVolume.value = 0.5f;
 
         PlayMainMenuMusic();
 
     }
 
+    private void FixedUpdate()
+    {
+        mainMenuMusic.volume = sliderVolume.value;
+        levelOneMusic.volume = sliderVolume.value;
+    }
     //TODO: refactor this garbage code to handle more robust sound management
 
     public void PlayMainMenuMusic()

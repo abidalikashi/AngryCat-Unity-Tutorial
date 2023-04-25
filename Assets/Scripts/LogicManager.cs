@@ -16,14 +16,14 @@ public class LogicManager : MonoBehaviour
     {
         playerScore = playerScore + scoreToAdd;
         scoreText.SetText(playerScore.ToString());
-        scoreText.GetComponent<TweenText>().Tween();
+        scoreText.GetComponent<TweenText>().TweenPunch();
     }
     [ContextMenu("Increase Score")]
     public void addScoreTest()
     {
         playerScore = playerScore + 1;
         scoreText.SetText(playerScore.ToString());
-        scoreText.GetComponent<TweenText>().Tween();
+        scoreText.GetComponent<TweenText>().TweenPunch();
 
     }
 
