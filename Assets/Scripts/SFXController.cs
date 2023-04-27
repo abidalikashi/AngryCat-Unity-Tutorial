@@ -80,9 +80,7 @@ public class SFXController : MonoBehaviour
 
     public void playSFXClip(int clipNumber)
     {
-        sfxSource.clip = clips[clipNumber];
-        sfxSource.Play();
-        sfxSource.loop = false;
+        sfxSource.PlayOneShot(clips[clipNumber]);
     }
 
 
