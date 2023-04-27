@@ -20,13 +20,18 @@ public class CatScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) == true && catIsAlive)
         {
             catRigidBody.velocity = Vector2.up * flapStrength;
+            SFXController.Instance.playSFXClip(0);
             
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        logic.gameOver();
-        catIsAlive = false;
+        if(catIsAlive)
+        {
+            logic.gameOver();
+            catIsAlive = false;
+        }
+
     }
 }

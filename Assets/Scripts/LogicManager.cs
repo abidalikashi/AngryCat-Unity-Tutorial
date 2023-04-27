@@ -31,10 +31,13 @@ public class LogicManager : MonoBehaviour
     public void restartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SFXController.Instance.PlayBackGroundMusic(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void gameOver()
     {
+        SFXController.Instance.playSFXClip(1);
+        SFXController.Instance.StopBackGroundMusic(SceneManager.GetActiveScene().buildIndex);
         gameOverScreen.SetActive(true);
     }
 }

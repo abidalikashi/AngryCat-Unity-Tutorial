@@ -22,6 +22,7 @@ public class ScoreTriggerScript : MonoBehaviour
         if(collision.gameObject.layer == 3)
         {
             logic.addScore(1);
+            SFXController.Instance.playSFXClip(2);
         }
     }
 }

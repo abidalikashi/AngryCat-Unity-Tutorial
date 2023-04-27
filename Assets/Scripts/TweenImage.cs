@@ -22,7 +22,6 @@ public class TweenImage : MonoBehaviour
             (value) =>
             {
                 image.fillAmount = value;
-                Debug.Log(changeValue);
                 image.color = Color.Lerp(beginColor, endColor, changeValue);
             });
     }
