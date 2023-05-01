@@ -38,6 +38,6 @@ public class LogicManager : MonoBehaviour
     {
         SFXController.Instance.playSFXClip(1);
         SFXController.Instance.StopBackGroundMusic(SceneManager.GetActiveScene().buildIndex);
-        gameOverScreen.SetActive(true);
+        gameOverScreen.GetComponent<Canvas>().enabled = true;
     }
 }

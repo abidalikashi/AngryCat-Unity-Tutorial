@@ -38,13 +38,9 @@ public class SFXController : MonoBehaviour
     void Start()
     {
         SceneManager.activeSceneChanged += ChangedActiveScene;
-        clips = GetComponents<AudioClip>();
-        music = GetComponents<AudioClip>();
 
         // start at half, we want to write a player config presistence class that holds the player 
         // settings profile and figures out the previous values on game start
-
-
     }
 
     private void FixedUpdate()
